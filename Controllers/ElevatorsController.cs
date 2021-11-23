@@ -72,6 +72,22 @@ namespace RocketApi.Controllers
 
             return await _context.elevators.FindAsync(id);
         }
+
+        [HttpGet("Offline")]
+        public object GetElevatorsOffline()
+        {
+            return _context.elevators
+                  .Where(elevator => elevator.status == "offline" || elevator.status == "maintenance")
+                  .Select(elevator => new { elevator.Id, elevator.status });
+
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Elevator>>> getElevators()
+        {
+            return await _context.elevators.ToListAsync();
+        }
+
         [HttpGet("update/{id}/{status}")]
         public async Task<dynamic> test(string status, long id)
         {
