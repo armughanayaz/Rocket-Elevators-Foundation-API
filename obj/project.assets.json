@@ -7390,24 +7390,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/lucastrudel/.nuget/packages/": {}
+    "C:\\Users\\lemyt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lucastrudel/Desktop/Rocket_Rest_API/RocketApi.csproj",
+      "projectUniqueName": "C:\\Users\\lemyt\\dotnet_api\\Rocket_Rest_API\\RocketApi.csproj",
       "projectName": "RocketApi",
-      "projectPath": "/Users/lucastrudel/Desktop/Rocket_Rest_API/RocketApi.csproj",
-      "packagesPath": "/Users/lucastrudel/.nuget/packages/",
-      "outputPath": "/Users/lucastrudel/Desktop/Rocket_Rest_API/obj/",
+      "projectPath": "C:\\Users\\lemyt\\dotnet_api\\Rocket_Rest_API\\RocketApi.csproj",
+      "packagesPath": "C:\\Users\\lemyt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lemyt\\dotnet_api\\Rocket_Rest_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/lucastrudel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\lemyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7471,7 +7473,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
