@@ -21,6 +21,7 @@ namespace RocketApi.Controllers
         {
             _context = context;
         }
+        
         [HttpGet]
         public async Task<dynamic> GetAllElevators(){
 
@@ -38,30 +39,40 @@ namespace RocketApi.Controllers
             return numbers;
         }
 
-        [HttpGet("status/{status}")]
-        public IEnumerable<Elevator> GetIntervention(string status)
-        {   
-            IQueryable<Elevator> elevators = from l in _context.elevators
-                                             where l.status == status
-                                             select l;
- 
-            return elevators.ToList();
-        }
 
-        
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Elevator>> GetElevators(long id)
+        [HttpGet("{id}/status")]
+        public async Task<ActionResult<string>> GetElevatorStatus(long id)
         {
-
             var elevator = await _context.elevators.FindAsync(id);
-            //if no elevetor is returned 
+
             if (elevator == null)
             {
                 return NotFound();
             }
 
-            return elevator;
+            return elevator.status;
         }
+
+        
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Elevator>> PutElevators(long id, string status)
+        {
+            if (status != null)
+            {
+                Elevator elevator = await _context.elevators.FindAsync(id);
+                if (elevator == null) return NotFound();
+
+                elevator.status = status;
+
+                _context.elevators.Update(elevator);
+                _context.SaveChanges();
+
+            };
+
+            return await _context.elevators.FindAsync(id);
+        }
+        
+        
     }
 
 }

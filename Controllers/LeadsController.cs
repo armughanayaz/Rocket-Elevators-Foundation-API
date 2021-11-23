@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RocketApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 
 namespace RocketApi.Controllers
 {
@@ -18,14 +20,27 @@ namespace RocketApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Lead>>>  GetLeads()
+        public List<Lead> GetLeads()
         {
+            var leads = _context.leads.ToList();
+            var customers = _context.customers.ToList();
+            List<Lead> notCustomers = new List<Lead>();
 
-            return await _context.leads.ToListAsync();
+            DateTime currentDate = DateTime.Now;
+            List<Lead> filteredLeads = leads.Where(lead => lead.Created_at > currentDate.AddDays(Convert.ToDouble(-30))).ToList();
+            List<Customer> filteredCustomers = customers.Where(customer => customer.Created_at > currentDate.AddDays(Convert.ToDouble(-30))).ToList();
+
+            foreach (Lead lead in leads) 
+            {
+                foreach (Customer customer in customers) 
+                {
+                    if (lead.Email != customer.Email && lead.PhoneNumber != customer.ContactPhone) {
+                        notCustomers.Add(lead);
+                        return notCustomers;
+                    }
+                }
+            }
+            return notCustomers;
         }
-    
-
     }
-
-   
 }
