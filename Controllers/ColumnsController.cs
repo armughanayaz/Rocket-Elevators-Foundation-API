@@ -18,10 +18,26 @@ namespace RocketApi.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public List<Column>  GetColumns()
+        [HttpGet("{id}/status")]
+        public async Task<ActionResult<string>> GetColumnStatus(long id)
         {
-            return _context.columns.ToList();
+            var column = await _context.columns.FindAsync(id);
+            if (column == null)
+            {
+                return NotFound();
+            }
+            return column.Status;
+        }
+
+        [HttpGet("update/{id}/{status}")]
+        public async Task<dynamic> test(string status, long id)
+        {
+            var column = await _context.columns.FindAsync(id);
+            
+            column.Status = status;
+            await _context.SaveChangesAsync();         
+
+            return column;
         }
     }  
 }

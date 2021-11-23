@@ -40,24 +40,7 @@ namespace RocketApi.Controllers
             }
             return elevator.Status;
         }
-        [HttpPut("{id}")]
-        public async Task<ActionResult<Elevator>> PutElevators(long id, string status)
-        {
-            if (status != null)
-            {
-                Elevator elevator = await _context.elevators.FindAsync(id);
-                if (elevator == null) return NotFound();
-
-                elevator.Status = status;
-
-                _context.elevators.Update(elevator);
-                _context.SaveChanges();
-
-            };
-
-            return await _context.elevators.FindAsync(id);
-        }
-
+       
         [HttpGet("Offline")]
         public object GetElevatorsOffline()
         {

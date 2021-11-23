@@ -18,10 +18,24 @@ namespace RocketApi.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public List<Elevator> GetBuildings()
+        public Building buildingsFindById(long id, List<Building> listBuilding) 
         {
-            var buildings = _context.batteries.ToList();
+            foreach (Building building in listBuilding) 
+            {
+                if (building.Id == id) 
+                {
+                    return building;
+                }
+            }
+            return null;
+        }
+
+        
+
+        [HttpGet]
+        public List<Building> GetBuildings()
+        {
+            var buildings = _context.buildings.ToList();
             var batteries = _context.batteries.ToList();
             var columns = _context.columns.ToList();
             var elevators = _context.elevators.ToList();
@@ -30,33 +44,16 @@ namespace RocketApi.Controllers
             var filteredColumns = columns.Where(column => column.Status == "intervention").ToList();
             var filteredElevators = elevators.Where(elevator => elevator.Status == "intervention").ToList();
 
+            List<Building> result = new List<Building>();
             foreach (Battery battery in filteredBatteries) 
             {
-                List<KeyValuePair<Battery, List<KeyValuePair<Column, List<Elevator>>>>> result = new List<KeyValuePair<Battery, List<KeyValuePair<Column, List<Elevator>>>>>();
-                
-                
-                var currentColumns = new List<Column>();
-                foreach (Column column in filteredColumns) 
+                var containerBuilding = buildingsFindById(battery.BuildingId, buildings);
+                if (containerBuilding != null && battery.getColumnList(filteredColumns, filteredElevators) && !result.Contains(containerBuilding)) 
                 {
-                    if (column.BatteryId == battery.Id) 
-                    {
-                        currentColumns.Add(column);
-                        var currentElevator = new List<Elevator>();
-                        foreach(Elevator elevator in filteredElevators) 
-                        {
-                            if ( elevator.ColumnId == column.Id) 
-                            {
-                               currentElevator.Add(elevator);
-                            }
-                        }
-                    }
+                    result.Add(containerBuilding);
                 }
             }
-
-
-
-            return filteredElevators;
-
+            return result;
         }
     }  
 }
