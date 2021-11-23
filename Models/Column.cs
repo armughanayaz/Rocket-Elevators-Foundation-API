@@ -2,10 +2,10 @@ using System;
 
 namespace RocketApi.Models
 {
-    public class Battery
+    public class Column
     {
         public long Id { get; set; }
-        public long BuildingId {get; set; }
+        public long BatteryId { get; set; }
         public string Status { get; set; }
     }
 }
