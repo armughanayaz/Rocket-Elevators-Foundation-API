@@ -11,6 +11,7 @@ namespace RocketApi.Models
         }
         public DbSet<Lead> leads { get; set; }
         public DbSet<Customer> customers { get; set; }
+        public DbSet<Elevator> elevators { get; set; }
 
 
     }
