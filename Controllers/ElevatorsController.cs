@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -71,6 +72,17 @@ namespace RocketApi.Controllers
 
             return await _context.elevators.FindAsync(id);
         }
+        [HttpGet("update/{id}/{status}")]
+        public async Task<dynamic> test(string status, long id)
+        {
+            var elevator = await _context.elevators.FindAsync(id);
+            
+            elevator.status = status;
+            await _context.SaveChangesAsync();         
+
+            return elevator;
+        }
+        
         
         
     }
