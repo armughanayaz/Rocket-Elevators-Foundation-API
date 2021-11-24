@@ -16,3 +16,17 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
 <br>
 
 ## Rest API endpoints
+
+- Retrieving the current status of a specific Battery
+- Changing the status of a specific Battery
+
+- Retrieving the current status of a specific Column
+- Changing the status of a specific Column
+
+- Retrieving the current status of a specific Elevator
+- Changing the status of a specific Elevator
+
+- Retrieving a list of Elevators that are not in operation at the time of the request
+- Retrieving a list of Buildings that contain at least one battery, column or elevator requiring intervention
+- Retrieving a list of Leads created in the last 30 days who have not yet become customers.
+
