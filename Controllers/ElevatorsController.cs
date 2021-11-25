@@ -17,7 +17,7 @@ namespace RocketApi.Controllers
         {
             _context = context;
         }
-        [HttpGet]
+        [HttpGet("{all}")]
         public async Task<dynamic> GetAllElevators(){
             var elevators = await _context.elevators.ToListAsync();
             var i = 0;
