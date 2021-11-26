@@ -80,7 +80,7 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
 - **[Alex Wallot](https://github.com/AlexWallot)**
 - **[Luka Trudel](https://github.com/LukaTrudel)**
 - **[Rafik Hoceini](https://github.com/rafikhoceini)**
-- **[Armughan Ayaz Janjua]**
+- **[Armughan Ayaz Janjua](https://github.com/armughanayaz)**
 
 
 
