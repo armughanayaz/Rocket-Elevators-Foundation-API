@@ -17,7 +17,7 @@ namespace RocketApi.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<Customer>>>  GetCustomers()
         {
             return await _context.customers.ToListAsync();
