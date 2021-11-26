@@ -18,6 +18,11 @@ namespace RocketApi.Controllers
         {
             _context = context;
         }
+        [HttpGet("all")]
+        public async Task<ActionResult<IEnumerable<Lead>>> getLeads()
+        {
+            return await _context.leads.ToListAsync();
+        }
 
         [HttpGet]
         public List<Lead> GetLeads()
@@ -42,5 +47,18 @@ namespace RocketApi.Controllers
             }
             return notCustomers;
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Lead>> GetLead(long id)
+        {
+            var lead = await _context.leads.FindAsync(id);
+
+            if (lead == null)
+            {
+                return NotFound();
+            }
+
+            return lead;
+        }
+        
     }
 }
