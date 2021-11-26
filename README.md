@@ -47,7 +47,41 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
 
 ## Addtional Rest API endpoints
 
-- Leads:
-  >
+- Get all leads
+    > https://rocketelevatorsapi.azurewebsites.net/api/leads/all
+- Get all customers
+    > https://rocketelevatorsapi.azurewebsites.net/api/customers
+- Get all elevators
+    > https://rocketelevatorsapi.azurewebsites.net/api/elevators
+- Get all columns
+    > Not implemented
+- Get all batteries
+    > https://rocketelevatorsapi.azurewebsites.net/api/batteries
+- Get all builddings
+    > https://rocketelevatorsapi.azurewebsites.net/api/batteries
+
+- Get lead by id
+    > Not implemented
+- Get customer by id
+    > Not implemented
+- Get elevator by id
+    > Not implemented
+- Get column by id
+    > Not implemented
+- Get battery by id
+    > Not implemented
+- Get all builddings
+    > Not implemented 
+
+
+## Contributors
+
+- **[Ted Lemy](https://github.com/lemyted)**
+- **[Alex Wallot](https://github.com/AlexWallot)**
+- **[Luka Trudel](https://github.com/LukaTrudel)**
+- **[Rafik Hoceini](https://github.com/rafikhoceini)**
+- **[Armughan Ayaz Janjua]**
+
+
 
 
