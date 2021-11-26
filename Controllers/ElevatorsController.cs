@@ -18,18 +18,12 @@ namespace RocketApi.Controllers
             _context = context;
         }
         [HttpGet("{all}")]
-        public async Task<dynamic> GetAllElevators(){
-            var elevators = await _context.elevators.ToListAsync();
-            var i = 0;
-            var numbers = new List<Int64>(){};
-            
-            foreach(Elevator elevator in elevators)
-            {
-                i++;
-            }
-            numbers.Add(i);
-            return numbers;
+        public async Task<ActionResult<IEnumerable<Elevator>>> GetAllElevators()
+        {
+            return await _context.elevators
+            .ToListAsync();
         }
+        
         [HttpGet("{id}/status")]
         public async Task<ActionResult<string>> GetElevatorStatus(long id)
         {
