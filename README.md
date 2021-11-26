@@ -30,7 +30,7 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
   > https://rocketelevatorsapi.azurewebsites.net/api/columns/update/1/online
 
 - Retrieving the current status of a specific Elevator
-  > https://rocketelevatorsapi.azurewebsites.net/api/columns/1/status
+  > https://rocketelevatorsapi.azurewebsites.net/api/elevators/1/status
 
 - Changing the status of a specific Elevator
   > https://rocketelevatorsapi.azurewebsites.net/api/elevators/update/1/online
@@ -50,28 +50,28 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
 - Get all leads
     > https://rocketelevatorsapi.azurewebsites.net/api/leads/all
 - Get all customers
-    > https://rocketelevatorsapi.azurewebsites.net/api/customers
+    > https://rocketelevatorsapi.azurewebsites.net/api/customers/all
 - Get all elevators
     > https://rocketelevatorsapi.azurewebsites.net/api/elevators/all
 - Get all columns
-    > Not deployed
+    > https://rocketelevatorsapi.azurewebsites.net/api/columns/all
 - Get all batteries
-    > https://rocketelevatorsapi.azurewebsites.net/api/batteries
+    > https://rocketelevatorsapi.azurewebsites.net/api/batteries/all
 - Get all builddings
-    > Not implemented
+    > https://rocketelevatorsapi.azurewebsites.net/api/buildings/all
 
 - Get lead by id
-    > Not implemented
+    > https://rocketelevatorsapi.azurewebsites.net/api/leads/1
 - Get customer by id
-    > Not implemented
+    > https://rocketelevatorsapi.azurewebsites.net/api/customers/1
 - Get elevator by id
-    > Not implemented
+    > https://rocketelevatorsapi.azurewebsites.net/api/elevators/1
 - Get column by id
-    > Not implemented
+    > https://rocketelevatorsapi.azurewebsites.net/api/columns/1
 - Get battery by id
-    > Not implemented
+    > https://rocketelevatorsapi.azurewebsites.net/api/batteries/1
 - Get all building by id
-    > Not implemented 
+    > https://rocketelevatorsapi.azurewebsites.net/api/buildings/1
 
 
 ## Contributors
