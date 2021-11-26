@@ -24,21 +24,13 @@ namespace RocketApi.Controllers
         }
 
         [HttpGet]
-        public async Task<dynamic> GetAllBatteries(){
-
-            var batteries = await _context.batteries.ToListAsync();
-
-            var i = 0;
-
-            var numbers = new List<Int64>(){};
-            foreach(Battery battery in batteries)
-            {
-                i++;
-            }
-            numbers.Add(i);
-
-            return numbers;
+        public async Task<ActionResult<IEnumerable<Battery>>> Getbatteries()
+        {
+            return await _context.batteries
+            .ToListAsync();
         }
+        
+
 
         [HttpGet("{id}/status")]
         public async Task<ActionResult<string>> GetBatteryStatus(long id)
