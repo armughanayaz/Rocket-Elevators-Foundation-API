@@ -22,6 +22,18 @@ namespace RocketApi.Controllers
         {
             return await _context.customers.ToListAsync();
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Customer>> GetCustomerId(long id)
+        {
+            var customer = await _context.customers.FindAsync(id);
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return customer;
+        }
     
 
     }

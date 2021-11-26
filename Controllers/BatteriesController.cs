@@ -29,6 +29,19 @@ namespace RocketApi.Controllers
             return await _context.batteries
             .ToListAsync();
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Battery>> GetBatteriesId(long id)
+        {
+            var batter = await _context.batteries.FindAsync(id);
+
+            if (batter == null)
+            {
+                return NotFound();
+            }
+
+            return batter;
+        }
         
 
 

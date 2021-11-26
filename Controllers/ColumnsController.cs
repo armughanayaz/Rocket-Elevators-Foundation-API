@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using RocketApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System;
+using Microsoft.AspNetCore.Http;
+
 
 namespace RocketApi.Controllers
 {
@@ -17,6 +20,27 @@ namespace RocketApi.Controllers
         {
             _context = context;
         }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Column>>> GetAllColumns()
+        {
+            return await _context.columns
+            .ToListAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Column>> GetColumnId(long id)
+        {
+            var column = await _context.columns.FindAsync(id);
+
+            if (column == null)
+            {
+                return NotFound();
+            }
+
+            return column;
+        }
+        
 
         [HttpGet("{id}/status")]
         public async Task<ActionResult<string>> GetColumnStatus(long id)

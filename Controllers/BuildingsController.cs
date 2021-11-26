@@ -30,6 +30,12 @@ namespace RocketApi.Controllers
             return null;
         }
 
+        [HttpGet("all")]
+        public async Task<ActionResult<IEnumerable<Building>>> getAllBuildings()
+        {
+            return await _context.buildings.ToListAsync();
+        }
+
         
 
         [HttpGet]
@@ -54,6 +60,18 @@ namespace RocketApi.Controllers
                 }
             }
             return result;
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Building>> GetBuildingId(long id)
+        {
+            var building = await _context.buildings.FindAsync(id);
+
+            if (building == null)
+            {
+                return NotFound();
+            }
+
+            return building;
         }
     }  
 }

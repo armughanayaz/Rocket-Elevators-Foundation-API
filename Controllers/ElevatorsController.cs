@@ -17,12 +17,33 @@ namespace RocketApi.Controllers
         {
             _context = context;
         }
-        [HttpGet("{all}")]
-        public async Task<ActionResult<IEnumerable<Elevator>>> GetAllElevators()
+        // [HttpGet("{all}")]
+        // public async Task<ActionResult<IEnumerable<Elevator>>> GetAllElevators()
+        // {
+        //     return await _context.elevators
+        //     .ToListAsync();
+        // }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Elevator>>> getElevators()
         {
-            return await _context.elevators
-            .ToListAsync();
+            return await _context.elevators.ToListAsync();
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Elevator>> GetElevatorId(long id)
+        {
+            var elevator = await _context.elevators.FindAsync(id);
+
+            if (elevator == null)
+            {
+                return NotFound();
+            }
+
+            return elevator;
+        }
+
+
         
         [HttpGet("{id}/status")]
         public async Task<ActionResult<string>> GetElevatorStatus(long id)
@@ -42,12 +63,6 @@ namespace RocketApi.Controllers
                   .Where(elevator => elevator.Status == "offline" || elevator.Status == "maintenance")
                   .Select(elevator => new { elevator.Id, elevator.Status });
 
-        }
-
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Elevator>>> getElevators()
-        {
-            return await _context.elevators.ToListAsync();
         }
 
         [HttpGet("update/{id}/{status}")]
