@@ -52,13 +52,13 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
 - Get all customers
     > https://rocketelevatorsapi.azurewebsites.net/api/customers
 - Get all elevators
-    > https://rocketelevatorsapi.azurewebsites.net/api/elevators
+    > https://rocketelevatorsapi.azurewebsites.net/api/elevators/all
 - Get all columns
-    > Not implemented
+    > Not deployed
 - Get all batteries
     > https://rocketelevatorsapi.azurewebsites.net/api/batteries
 - Get all builddings
-    > https://rocketelevatorsapi.azurewebsites.net/api/batteries
+    > Not implemented
 
 - Get lead by id
     > Not implemented
