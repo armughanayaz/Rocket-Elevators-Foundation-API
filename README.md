@@ -70,7 +70,7 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
     > Not implemented
 - Get battery by id
     > Not implemented
-- Get all builddings
+- Get all building by id
     > Not implemented 
 
 
