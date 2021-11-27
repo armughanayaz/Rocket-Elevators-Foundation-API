@@ -135,3 +135,5 @@
 /Users/lucastrudel/Desktop/Rocket_Rest_API/obj/Release/net5.0/ref/RocketApi.dll
 /Users/lucastrudel/Desktop/Rocket_Rest_API/obj/Release/net5.0/RocketApi.pdb
 /Users/lucastrudel/Desktop/Rocket_Rest_API/obj/Release/net5.0/RocketApi.genruntimeconfig.cache
+/Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/Npgsql.dll
+/Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

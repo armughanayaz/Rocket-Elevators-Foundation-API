@@ -35,6 +35,8 @@
 /Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 /Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/MySqlConnector.dll
 /Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Newtonsoft.Json.dll
+/Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Npgsql.dll
+/Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Swashbuckle.AspNetCore.Swagger.dll
 /Users/lucastrudel/Desktop/Rocket_Rest_API/bin/Release/net5.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
