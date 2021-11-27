@@ -21,7 +21,7 @@ namespace RocketApi.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<Column>>> GetAllColumns()
         {
             return await _context.columns

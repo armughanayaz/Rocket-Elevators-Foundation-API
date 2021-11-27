@@ -17,14 +17,8 @@ namespace RocketApi.Controllers
         {
             _context = context;
         }
-        // [HttpGet("{all}")]
-        // public async Task<ActionResult<IEnumerable<Elevator>>> GetAllElevators()
-        // {
-        //     return await _context.elevators
-        //     .ToListAsync();
-        // }
 
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<Elevator>>> getElevators()
         {
             return await _context.elevators.ToListAsync();
