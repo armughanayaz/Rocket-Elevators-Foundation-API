@@ -73,6 +73,11 @@ For the 6th week, we have created a rest API with 9 endpoints and a graphql API.
 - Get all building by id
     > https://rocketelevatorsapi.azurewebsites.net/api/buildings/1
 
+- Get multiple fact-interventions by building id
+    > https://rocketelevatorsapi.azurewebsites.net/api/factinterventions/specificbuilding/1
+- Get fact-intervention by id
+    > https://rocketelevatorsapi.azurewebsites.net/api/factinterventions/specificintervention/1
+
 
 ## Contributors
 
