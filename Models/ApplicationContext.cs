@@ -15,6 +15,7 @@ namespace RocketApi.Models
         public DbSet<Building> buildings { get; set; }
         public DbSet<Column> columns { get; set; }
         public DbSet<Elevator> elevators { get; set; }
+        public DbSet<Elevator> interventions { get; set; }
 
     }
 }

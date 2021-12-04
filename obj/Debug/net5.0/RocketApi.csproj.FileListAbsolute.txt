@@ -274,3 +274,10 @@ C:/Users/lemyt/dotnet_api/Rocket_Rest_API/obj/Debug/net5.0/RocketApi.dll
 C:/Users/lemyt/dotnet_api/Rocket_Rest_API/obj/Debug/net5.0/ref/RocketApi.dll
 C:/Users/lemyt/dotnet_api/Rocket_Rest_API/obj/Debug/net5.0/RocketApi.pdb
 C:/Users/lemyt/dotnet_api/Rocket_Rest_API/obj/Debug/net5.0/RocketApi.genruntimeconfig.cache
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.csproj.AssemblyReference.cache
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.AssemblyInfoInputs.cache
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.AssemblyInfo.cs
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.csproj.CoreCompileInputs.cache
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\armug\week_9\Rocket-Elevators-Foundation-API\obj\Debug\net5.0\RocketApi.MvcApplicationPartsAssemblyInfo.cache

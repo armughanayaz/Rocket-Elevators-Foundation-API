@@ -23,7 +23,7 @@ namespace RocketApi
         {
 
             services.AddControllers();
-            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            var connectionString = Configuration.GetConnectionString("MysqlConnection"); // DefaultConnection
             var serverVersion = new MySqlServerVersion(new System.Version(8, 0, 27));
             services.AddDbContext<ApplicationContext>(options =>
             options.UseMySql(connectionString, serverVersion));
